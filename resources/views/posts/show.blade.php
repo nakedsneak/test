@@ -21,6 +21,6 @@
             <p class='body'>{{ $post->body }}</p>
             <d class='updated_at'>updated_at.{{ $post->updated_at }}</d>
         </div>
-        <div class="back">[<a href='/'>back</a>]</div>
+        <div class="back">[<a href='/'>一覧へ</a>]</div>
     </body>
 </html>
