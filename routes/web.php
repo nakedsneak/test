@@ -20,3 +20,5 @@ Route::get('/posts/{post}', 'PostController@show');
 Route::get('/posts/{post}/edit', 'PostController@edit');
 
 Route::post('/posts', 'PostController@store');
+
+Route::post('/posts/{post}', 'PostController@update');
