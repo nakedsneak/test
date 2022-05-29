@@ -29,7 +29,7 @@
             <p class="body__error" style="color:red">{{ $errors->first('post.body') }}</p>
             </div>
             <div class="store">
-                <input type="submit" value='保存'/>
+                <input type="submit" value='投稿'/>
                 
             </div>
         </form>
