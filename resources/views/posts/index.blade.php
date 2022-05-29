@@ -20,6 +20,7 @@
         <div class="posts">
                 <div class='post'>
             @foreach ($posts as $post)
+                    <div class="edit">[<a href='/posts/{{ $post->id }}/edit'>編集</a>]</div>
                     <h2 class="title">
                         <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
                     </h2>
