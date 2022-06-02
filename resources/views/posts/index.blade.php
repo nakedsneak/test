@@ -20,11 +20,17 @@
         <div class="posts">
                 <div class='post'>
             @foreach ($posts as $post)
-                    <div class="edit">[<a href='/posts/{{ $post->id }}/edit'>編集</a>]</div>
-                    <h2 class="title">
-                        <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
-                    </h2>
-                    <p class='body'>{{ $post->body }}</p>
+                    <form action="/posts/{{ $post->id }}" method="POST" style="display:inline">
+                    @csrf
+                    @method('delete')
+                        <div class="edit">[<a href='/posts/{{ $post->id }}/edit'>編集</a>]</div>
+                        <button type="submit">削除</button>
+                        <div class="delete"></div>
+                        <h2 class="title">
+                            <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
+                        </h2>
+                        <p class='body'>{{ $post->body }}</p>
+                    </form>
             @endforeach
                 </div>
             
